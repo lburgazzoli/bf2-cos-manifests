@@ -1,5 +1,5 @@
 resources:
-  - https://github.com/bf2fc6cc711aee1a0c2a/cos-fleetshard//etc/kubernetes/manifests/overlays/local
+  - https://github.com/lburgazzoli/bf2-cos-fleetshard//etc/kubernetes/manifests/overlays/local?ref=knative-playground
 
 generatorOptions:
   disableNameSuffixHash: true
@@ -35,7 +35,7 @@ patchesJson6902:
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/imagePullPolicy
-        value: "IfNotPresent"
+        value: "Never"
       - op: replace
         path: /spec/replicas
         value: 1
@@ -47,7 +47,7 @@ patchesJson6902:
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/imagePullPolicy
-        value: "IfNotPresent"
+        value: "Never"
       - op: replace
         path: /spec/replicas
         value: 1
@@ -59,7 +59,7 @@ patchesJson6902:
     patch: |-
       - op: replace
         path: /spec/template/spec/containers/0/imagePullPolicy
-        value: "IfNotPresent"
+        value: "Never"
       - op: replace
         path: /spec/replicas
         value: 1
